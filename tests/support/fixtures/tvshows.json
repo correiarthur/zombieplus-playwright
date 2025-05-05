@@ -1,0 +1,102 @@
+{
+    "create": {
+        "title": "The Last of Us",
+        "overview": "Em um mundo devastado por uma infecção zumbi, um homem durão é encarregado de levar uma adolescente imune através dos EUA para encontrar uma cura.",
+        "company": "HBO",
+        "release_year": 2023,
+        "featured": true,
+        "seasons": "2",
+        "cover": "/covers/tvshows/the_last_of_us.jpeg"
+    },
+    "duplicate": {
+        "title": "The Walking Dead",
+        "overview": "Um grupo de sobreviventes tenta se manter vivo em um mundo pós-apocalíptico dominado por zumbis, conhecidos como 'walkers'.",
+        "company": "AMC",
+        "release_year": 2010,
+        "featured": false,
+        "seasons": "11",
+        "cover": "/covers/tvshows/twd.png"
+    },
+    "to_remove": {
+        "title": "Fear the Walking Dead",
+        "overview": "Spin-off de 'The Walking Dead', acompanha uma família disfuncional que tenta sobreviver ao início do apocalipse zumbi em Los Angeles.",
+        "company": "AMC",
+        "release_year": 2015,
+        "featured": false,
+        "seasons": "8",
+        "cover": "/covers/tvshows/ftwd.png"
+    },
+    "search": {
+        "input": "zumbi",
+        "outputs": [
+            "Zumbi Nation",
+            "Kingdom Zumbi",
+            "Black Zumbi Summer"
+        ],
+        "data": [
+            {
+                "title": "Zumbi Nation",
+                "overview": "Um grupo de sobreviventes deve escoltar um homem imune a uma instalação de pesquisa na Califórnia, enquanto enfrentam zumbis mutantes e outros perigos.",
+                "company": "Syfy",
+                "release_year": 2014,
+                "featured": false,
+                "seasons": "5",
+                "cover": "/covers/tvshows/z_nation.jpg"
+            },
+            {
+                "title": "Kingdom Zumbi",
+                "overview": "Na Coreia medieval, um príncipe luta para salvar seu reino de uma misteriosa praga que transforma as pessoas em zumbis famintos.",
+                "company": "Netflix",
+                "release_year": 2019,
+                "featured": true,
+                "seasons": "2",
+                "cover": "/images/kingdom.jpg"
+            },
+            {
+                "title": "Black Zumbi Summer",
+                "overview": "No início de um apocalipse zumbi, uma mãe separada de sua filha embarca em uma jornada perigosa para reencontrá-la.",
+                "company": "Netflix",
+                "release_year": 2019,
+                "featured": false,
+                "seasons": "2",
+                "cover": "/images/black-summer.jpg"
+            }
+        ]
+    },
+    "all_of_us_are_dead": {
+        "title": "All of Us Are Dead",
+        "overview": "Estudantes de uma escola lutam para sobreviver quando um vírus zumbi se espalha rapidamente pelo campus e pela cidade.",
+        "company": "Netflix",
+        "release_year": 2022,
+        "featured": true,
+        "seasons": "1",
+        "cover": "/images/all-of-us-are-dead.jpg"
+    },
+    "izombie": {
+        "title": "iZombie",
+        "overview": "Uma médica residente vira zumbi e começa a trabalhar em um necrotério, usando suas habilidades para resolver crimes ao consumir os cérebros das vítimas.",
+        "company": "The CW",
+        "release_year": 2015,
+        "featured": false,
+        "seasons": "5",
+        "cover": "/images/izombie.jpg"
+    },
+    "santa_clarita_diet": {
+        "title": "Santa Clarita Diet",
+        "overview": "Uma corretora de imóveis vira zumbi e sua família tenta ajudá-la a lidar com sua nova condição, enquanto mantém as aparências na sociedade.",
+        "company": "Netflix",
+        "release_year": 2017,
+        "featured": false,
+        "seasons": "3",
+        "cover": "/images/santa-clarita-diet.jpg"
+    },
+    "dead_set": {
+        "title": "Dead Set",
+        "overview": "Durante um surto zumbi, os participantes de um reality show ficam presos no estúdio e precisam lutar para sobreviver.",
+        "company": "Channel 4",
+        "release_year": 2008,
+        "featured": false,
+        "seasons": "1",
+        "cover": "/images/dead-set.jpg"
+    }
+}

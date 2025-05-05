@@ -1,4 +1,4 @@
-const { test } = require('../support')
+const { test, expect } = require('../support')
 const data = require('../support/fixtures/movies.json')
 const { executeSQL } = require('../support/database')
 
@@ -7,25 +7,45 @@ test('deve cadastrar um novo filme', async ({ page }) => {
     await executeSQL(`DELETE FROM movies WHERE title = '${movie.title}';`)
     await page.login.do('admin@zombieplus.com', 'pwd123', 'Admin')
     await page.movies.create(movie)
-    await page.toast.containText('Cadastro realizado com sucesso!')
+    await page.popup.haveText(`O filme '${movie.title}' foi adicionado ao catálogo.`)
 })
-test('não deve cadastrar quando o título é duplicado', async ({ page }) => {
+test('deve remover um filme', async ({ page, request }) => {
+    const movie = data.to_remove
+    await executeSQL(`DELETE FROM movies WHERE title = '${movie.title}';`)
+    await request.api.postMovie(movie)
+    await page.login.do('admin@zombieplus.com', 'pwd123', 'Admin')
+    await page.movies.remove(movie.title)
+    await page.popup.haveText('Filme removido com sucesso.')
+    //incrementar uma validação as rows (linhas) em busca do filme
+})
+test('não deve cadastrar quando o título é duplicado', async ({ page, request }) => {
     const movie = data.duplicate
     await executeSQL(`DELETE FROM movies WHERE title = '${movie.title}';`)
+    await request.api.postMovie(movie)
     await page.login.do('admin@zombieplus.com', 'pwd123', 'Admin')
     await page.movies.create(movie)
-    await page.toast.containText('Cadastro realizado com sucesso!')
-    await page.movies.create(movie)
-    await page.toast.containText('Oops!Este conteúdo já encontra-se cadastrado no catálogo')
+    await page.popup.haveText(
+        `O título '${movie.title}' já consta em nosso catálogo. Por favor, verifique se há necessidade de atualizações ou correções para este item.`
+    )
 })
 test('não deve cadastrar quando os campos obrigatórios não são preenchidos', async ({ page }) => {
     await page.login.do('admin@zombieplus.com', 'pwd123', 'Admin')
     await page.movies.goForm()
     await page.movies.submit()
     await page.movies.alertHaveText([
-        'Por favor, informe o título.',
-        'Por favor, informe a sinopse.',
-        'Por favor, informe a empresa distribuidora.',
-        'Por favor, informe o ano de lançamento.'
+        'Campo obrigatório',
+        'Campo obrigatório',
+        'Campo obrigatório',
+        'Campo obrigatório'
     ])
+})
+test('deve realizar busca pelo termo zumbi', async ({ page, request }) => {
+    const movies = data.search
+    movies.data.forEach(async (m) => {
+        await executeSQL(`DELETE FROM movies WHERE title = '${m.title}';`)
+        await request.api.postMovie(m)
+    })
+    await page.login.do('admin@zombieplus.com', 'pwd123', 'Admin')
+    await page.movies.search(movies.input)
+    await page.movies.tableHave(movies.outputs)
 })
