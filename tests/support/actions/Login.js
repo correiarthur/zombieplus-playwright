@@ -4,7 +4,6 @@ export class Login {
     constructor(page) {
         this.page = page
     }
-
     async do(email, password, username) {
         await this.visit()
         await this.submit(email, password)

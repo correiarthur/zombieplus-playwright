@@ -16,7 +16,6 @@ test('deve remover um filme', async ({ page, request }) => {
     await page.login.do('admin@zombieplus.com', 'pwd123', 'Admin')
     await page.movies.remove(movie.title)
     await page.popup.haveText('Filme removido com sucesso.')
-    //incrementar uma validação as rows (linhas) em busca do filme
 })
 test('não deve cadastrar quando o título é duplicado', async ({ page, request }) => {
     const movie = data.duplicate

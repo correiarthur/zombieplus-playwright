@@ -39,7 +39,7 @@ test('não deve cadastrar quando os campos obrigatórios não são preenchidos',
         'Campo obrigatório (apenas números)'
     ])
 })
-test('deve realizar busca pelo termo zumbi', async ({ page, request }) => {
+test('deve realizar busca pelo termo zombie', async ({ page, request }) => {
     const serie = data.search
     serie.data.forEach(async (s) => {
         await executeSQL(`DELETE FROM tvshows WHERE title = '${s.title}';`)

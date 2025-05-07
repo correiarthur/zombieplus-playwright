@@ -27,15 +27,15 @@
         "cover": "/covers/tvshows/ftwd.png"
     },
     "search": {
-        "input": "zumbi",
+        "input": "Zombie",
         "outputs": [
-            "Zumbi Nation",
-            "Kingdom Zumbi",
-            "Black Zumbi Summer"
+            "Zombie Nation",
+            "Kingdom Zombie",
+            "iZombie"
         ],
         "data": [
             {
-                "title": "Zumbi Nation",
+                "title": "Zombie Nation",
                 "overview": "Um grupo de sobreviventes deve escoltar um homem imune a uma instalação de pesquisa na Califórnia, enquanto enfrentam zumbis mutantes e outros perigos.",
                 "company": "Syfy",
                 "release_year": 2014,
@@ -44,7 +44,7 @@
                 "cover": "/covers/tvshows/z_nation.jpg"
             },
             {
-                "title": "Kingdom Zumbi",
+                "title": "Kingdom Zombie",
                 "overview": "Na Coreia medieval, um príncipe luta para salvar seu reino de uma misteriosa praga que transforma as pessoas em zumbis famintos.",
                 "company": "Netflix",
                 "release_year": 2019,
@@ -53,15 +53,24 @@
                 "cover": "/images/kingdom.jpg"
             },
             {
-                "title": "Black Zumbi Summer",
-                "overview": "No início de um apocalipse zumbi, uma mãe separada de sua filha embarca em uma jornada perigosa para reencontrá-la.",
-                "company": "Netflix",
-                "release_year": 2019,
+                "title": "iZombie",
+                "overview": "Uma médica residente vira zumbi e começa a trabalhar em um necrotério, usando suas habilidades para resolver crimes ao consumir os cérebros das vítimas.",
+                "company": "The CW",
+                "release_year": 2015,
                 "featured": false,
-                "seasons": "2",
-                "cover": "/images/black-summer.jpg"
+                "seasons": "5",
+                "cover": "/images/izombie.jpg"
             }
         ]
+    },
+    "Black Summer": {
+        "title": "Black Summer",
+        "overview": "No início de um apocalipse zumbi, uma mãe separada de sua filha embarca em uma jornada perigosa para reencontrá-la.",
+        "company": "Netflix",
+        "release_year": 2019,
+        "featured": false,
+        "seasons": "2",
+        "cover": "/images/black-summer.jpg"
     },
     "all_of_us_are_dead": {
         "title": "All of Us Are Dead",
@@ -71,15 +80,6 @@
         "featured": true,
         "seasons": "1",
         "cover": "/images/all-of-us-are-dead.jpg"
-    },
-    "izombie": {
-        "title": "iZombie",
-        "overview": "Uma médica residente vira zumbi e começa a trabalhar em um necrotério, usando suas habilidades para resolver crimes ao consumir os cérebros das vítimas.",
-        "company": "The CW",
-        "release_year": 2015,
-        "featured": false,
-        "seasons": "5",
-        "cover": "/images/izombie.jpg"
     },
     "santa_clarita_diet": {
         "title": "Santa Clarita Diet",

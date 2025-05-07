@@ -1,4 +1,3 @@
-
 const { test, expect } = require('../support')
 
 test('deve logar como administrador', async ({ page }) => {
